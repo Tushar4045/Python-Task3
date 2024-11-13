@@ -17,12 +17,9 @@ class calci():
 
     def div(self):
         if 0 in [self.val1,self.val2,self.val3,self.val4,self.val5]:
-        # try:
             print('cannot divide by zero')
         else:
             print('Division: ',self.val1/self.val2/self.val3/self.val4/self.val5)
-        # except ZeroDivisionError:
-            # print('Cannot  divide by zero')
     
     def mod(self):
         if 0 in [self.val1,self.val2,self.val3,self.val4,self.val5]:
@@ -43,6 +40,18 @@ class calci():
         num = [self.val1,self.val2,self.val3,self.val4,self.val5]
         num.sort()
         print('Median: ', num[2])
+
+    def mode(self):
+        num = [self.val1,self.val2,self.val3,self.val4,self.val5]
+        mo_re = 0
+        for i in num:
+            count = 0
+            for j in num:
+                if i == j:
+                    count += 1
+        mo_re = i
+        print('Mode: ', mo_re)
+        
     
     def total_75per(self):
         print('75% of total: ', (75*(self.val1+self.val2+self.val3+self.val4+self.val5))/100)
@@ -64,6 +73,7 @@ m1.min()
 m1.max()
 m1.mean()
 m1.median()
+m1.mode()
 m1.total_75per()
 m1.total_50per()
 m1.total_25per()
